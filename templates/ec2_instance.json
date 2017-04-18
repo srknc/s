@@ -1,0 +1,12 @@
+"EC2Instance###n###":{
+   "Properties":{
+      "ImageId":"###ImageId###",
+      "InstanceType":"###InstanceType###",
+      "SecurityGroups":[
+         {
+            "Ref":"InstanceSecurityGroup"
+         }
+      ]
+   },
+   "Type":"AWS::EC2::Instance"
+},

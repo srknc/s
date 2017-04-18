@@ -1,0 +1,11 @@
+{"ec2": {
+    "ami": "ami-b97a12ce",
+    "instance_type": "t2.micro",
+    "sg": {
+        "desc": "Enable SSH access via port 22",
+        "src": "0.0.0.0/0",
+        "from_port": "22",
+        "to_port": "22",
+        "proto": "tcp"
+    }
+}}

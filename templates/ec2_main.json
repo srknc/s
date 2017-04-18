@@ -1,0 +1,31 @@
+{
+   "AWSTemplateFormatVersion":"2010-09-09",
+   "Outputs":{
+      "PublicIP":{
+         "Description":"Public IP address of the newly created EC2 instance",
+         "Value":{
+            "Fn::GetAtt":[
+               "EC2Instance",
+               "PublicIp"
+            ]
+         }
+      }
+   },
+   "Resources":{
+      ###ec2_defination###
+      "InstanceSecurityGroup":{
+         "Properties":{
+            "GroupDescription":"###sg_desc###",
+            "SecurityGroupIngress":[
+               {
+                  "CidrIp":"###sg_src###",
+                  "FromPort":"###sg_from_port###",
+                  "IpProtocol":"###sg_proto###",
+                  "ToPort":"###sg_to_port###"
+               }
+            ]
+         },
+         "Type":"AWS::EC2::SecurityGroup"
+      }
+   }
+}
